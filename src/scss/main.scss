@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+
+//Hero css//
+
+.hero{
+    background-image: url('../img/hero.jpg');
+    min-height: 50vw;
+    background-repeat: no-repeat;
+    position: relative; 
+
+    &::before { 
+        content: ""; 
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); 
+        pointer-events: none;
+    }
+    
+    nav{
+        ul{
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                padding: 25px;
+                margin-left: 20px;
+                a{
+                    color: #f9f9f9;
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    &__tittle{
+        max-width: 50%;
+        position: relative;
+        top: 200px;
+
+        img{
+            width: 100%;
+            position: relative;
+
+        }
+    }
+}
+
+//Section about*//
+
+.about{
+    &__tittle{
+        h2{
+            margin-top: 40px;
+            padding: 16px;
+            text-align: center;
+            font-size: 40px;
+            color: #f9f9f9;
+        }
+    }
+    .about__txt{
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 0 30px 0;
+        p{
+            color: #f9f9f9;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+// section faq accordion//
+
+
+.faq{
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+
+
+    h2{
+        color: #f9f9f9;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+        
+    }
+    .accordion{
+        padding: 10px 0 10px 0;
+    }
+}
+
+.accordion-button {
+    background-color: transparent;
+    border: red 1px solid;
+    border-radius: 4px;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion-button:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 20px 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 4px;
+}
